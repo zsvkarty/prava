@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tvůj Guide pro cestu na práva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 p-4" id="main-nav">
+        <div class="container mx-auto flex items-center">
+            <!-- Logo / Brand Text -->
+            <div class="logo-container">
+                <h1 class="text-xl font-bold whitespace-nowrap">Dostaň se na práva!</h1>
+            </div>
+            
+            <!-- Desktop Navigation Links (centered) -->
+            <div class="nav-links-container">
+                <div class="flex space-x-8">
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Pricing</a>
+                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link">Blog</a>
+                </div>
+            </div>
+            
+            <!-- Hamburger menu button (mobile only) -->
+            <button onclick="document.getElementById('mobile-menu').classList.remove('-top-full'); document.getElementById('mobile-menu').classList.add('top-0'); document.getElementById('mobile-menu-overlay').classList.remove('hidden');" class="md:hidden flex-shrink-0 ml-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Navigation Menu (slide down from top, partial height) - works for both mobile and desktop -->
+    <div id="mobile-menu" class="fixed left-0 right-0 -top-full h-auto max-h-[33vh] bg-white z-50 flex flex-col transition-all duration-300 overflow-y-auto shadow-lg">
+        <!-- Header with X on left and title centered -->
+        <div class="container mx-auto p-4">
+            <div class="flex items-center justify-center relative">
+                <!-- X button on left -->
+                <button onclick="document.getElementById('mobile-menu').classList.remove('top-0'); document.getElementById('mobile-menu').classList.add('-top-full'); document.getElementById('mobile-menu-overlay').classList.add('hidden');" class="absolute left-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                
+                <!-- Title centered -->
+                <h1 class="text-xl font-bold text-indigo-900 text-center">Dostaň se na práva!</h1>
+            </div>
+        </div>
+        
+        <!-- Navigation links - centered -->
+        <div class="container mx-auto px-4 pb-6">
+            <div class="flex flex-col items-center space-y-4 mt-4">
+                <a href="#" class="text-indigo-900 hover:text-indigo-600">Features</a>
+                <a href="#" class="text-indigo-900 hover:text-indigo-600">Pricing</a>
+                <a href="#" class="text-indigo-900 hover:text-indigo-600">Contact</a>
+                <a href="#" class="text-indigo-900 hover:text-indigo-600">Blog</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for closing menu when clicking outside -->
+    <div id="mobile-menu-overlay" onclick="document.getElementById('mobile-menu').classList.remove('top-0'); document.getElementById('mobile-menu').classList.add('-top-full'); this.classList.add('hidden');" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+    <!-- Hero Section (without reviews) -->
+    <div class="gradient-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-6 sm:px-4 pt-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 px-2">
+                    Tvůj Guide<br>pro cestu na práva
+                </h1>
+                <p class="text-xl text-white mb-8 max-w-2xl mx-auto px-2">
+                    Pouč se z mnoha chyb, dvou současných studentů a ušetři si spoustu stresu.
+                 
+                    Stručně, jasně, rychle.
+                </p>
+                
+                <!-- Trusted By Section -->
+                <div class="flex justify-center items-center mb-8 px-2">
+                    <div class="trusted-avatars">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=2" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=3" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=4" alt="User">
+                    </div>
+                    <span class="text-sm text-white ml-3">100+ lidí se už poučilo z našich chyb</span>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mx-auto max-w-[90%] sm:max-w-none">
+                    <button class="bg-purple-100 text-purple-700 px-6 py-3 rounded-lg border border-purple-200 hover:bg-purple-200 w-full sm:w-auto">
+                        Fakta o příjímačkách
+                    </button>
+                    <button class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 flex items-center justify-center w-full sm:w-auto">
+                        Poučte se z našich chyb
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section without the heading -->
+    <div class="bg-white py-16 reviews-section">
+        <div class="container mx-auto px-6 sm:px-4">
+            <!-- Review Cards Carousel with pure white fade -->
+            <div class="relative overflow-hidden carousel-container w-full">
+                <!-- Pure white gradient fade on left edge -->
+                <div class="absolute left-0 top-0 bottom-0 z-10 carousel-fade-left"></div>
+                
+                <div class="review-carousel flex">
+                    <!-- Review Card 1 -->
+                    <div class="review-card bg-white rounded-lg p-6 mx-4 flex-shrink-0 w-80">
+                        <p class="text-indigo-900 font-medium text-lg mb-6">
+                            "Přehledné a praktické rady, které mi pomohly se efektivně připravit na zkoušky."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/100?img=9" alt="Reviewer" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-indigo-900 font-medium">Jana Svobodová</h4>
+                                <p class="text-gray-500 text-sm">Studentka PF MU</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review Card 2 -->
+                    <div class="review-card bg-white rounded-lg p-6 mx-4 flex-shrink-0 w-80">
+                        <p class="text-indigo-900 font-medium text-lg mb-6">
+                            "Skvělý zdroj informací, který mi pomohl pochopit, co mě na právech čeká."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/100?img=11" alt="Reviewer" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-indigo-900 font-medium">Martin Dvořák</h4>
+                                <p class="text-gray-500 text-sm">Student PF UP</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review Card 3 -->
+                    <div class="review-card bg-white rounded-lg shadow-lg p-6 mx-4 flex-shrink-0 w-80">
+                        <p class="text-indigo-900 font-medium text-lg mb-6">
+                            "Delivering relevant projects on time, fortifying our team in the process."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/100?img=5" alt="Reviewer" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-indigo-900 font-medium">Alina Javosich</h4>
+                                <p class="text-gray-500 text-sm">Talent aquisition @ Toptal</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review Card 4 -->
+                    <div class="review-card bg-white rounded-lg shadow-lg p-6 mx-4 flex-shrink-0 w-80">
+                        <p class="text-indigo-900 font-medium text-lg mb-6">
+                            "Díky tomuto průvodci jsem se dostal na práva napoprvé. Ušetřil mi spoustu času."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/100?img=7" alt="Reviewer" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-indigo-900 font-medium">Tomáš Novák</h4>
+                                <p class="text-gray-500 text-sm">Student PF UK</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate cards for infinite scroll effect -->
+                    <div class="review-card bg-white rounded-lg shadow-lg p-6 mx-4 flex-shrink-0 w-80">
+                        <p class="text-indigo-900 font-medium text-lg mb-6">
+                            "Přehledné a praktické rady, které mi pomohly se efektivně připravit na zkoušky."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/100?img=9" alt="Reviewer" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-indigo-900 font-medium">Jana Svobodová</h4>
+                                <p class="text-gray-500 text-sm">Studentka PF MU</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card bg-white rounded-lg shadow-lg p-6 mx-4 flex-shrink-0 w-80">
+                        <p class="text-indigo-900 font-medium text-lg mb-6">
+                            "Skvělý zdroj informací, který mi pomohl pochopit, co mě na právech čeká."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/100?img=11" alt="Reviewer" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-indigo-900 font-medium">Martin Dvořák</h4>
+                                <p class="text-gray-500 text-sm">Student PF UP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pure white gradient fade on right edge -->
+                <div class="absolute right-0 top-0 bottom-0 z-10 carousel-fade-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Implementation Section -->
+    <div class="bg-white py-20">
+        <div class="container mx-auto px-6 sm:px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                Easy implementation in<br>three easy steps
+            </h2>
+            
+            <!-- Feature Cards -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Automated Candidate Ranking -->
+                <div class="feature-card">
+                    <h3 class="text-xl font-bold mb-4">Automated Candidate Ranking</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our AI-powered system ranks candidates based on qualifications, experience, and cultural fit.
+                    </p>
+                    <button class="text-indigo-600 font-semibold flex items-center">
+                        Learn more
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Real-Time Applicant Analytics -->
+                <div class="feature-card">
+                    <h3 class="text-xl font-bold mb-4">Real-Time Applicant Analytics</h3>
+                    <p class="text-gray-600 mb-4">
+                        Track and analyze applicant data in real-time to make informed hiring decisions.
+                    </p>
+                    <button class="text-indigo-600 font-semibold flex items-center">
+                        Learn more
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Seamless Multilingual Support -->
+                <div class="feature-card">
+                    <h3 class="text-xl font-bold mb-4">Seamless Multilingual Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        Break language barriers with our advanced multilingual support system.
+                    </p>
+                    <button class="text-indigo-600 font-semibold flex items-center">
+                        Learn more
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6 sm:px-4">
+            <div class="flex justify-center space-x-6">
+                <img src="partner-logo1.svg" alt="Partner" class="h-8 opacity-50">
+                <img src="partner-logo2.svg" alt="Partner" class="h-8 opacity-50">
+                <img src="partner-logo3.svg" alt="Partner" class="h-8 opacity-50">
+                <img src="partner-logo4.svg" alt="Partner" class="h-8 opacity-50">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scroll behavior for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Scroll detection for navbar color change
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainNav = document.getElementById('main-nav');
+            const heroSection = document.querySelector('.gradient-bg');
+            
+            function checkScroll() {
+                if (window.scrollY > 50) { // Change earlier for better UX
+                    mainNav.classList.add('scrolled');
+                } else {
+                    mainNav.classList.remove('scrolled');
+                }
+            }
+            
+            // Initial check
+            checkScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkScroll);
+        });
+    </script>
+</body>
+</html>
