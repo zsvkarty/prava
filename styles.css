@@ -122,6 +122,10 @@ body {
 .carousel-fade-left {
     background: linear-gradient(to right, 
         #ffffff 0%, 
+        rgba(255, 255, 255, 0.9) 20%, 
+        rgba(255, 255, 255, 0.6) 40%, 
+        rgba(255, 255, 255, 0.3) 60%, 
+        rgba(255, 255, 255, 0.1) 80%, 
         rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
     width: 120px;
@@ -135,6 +139,10 @@ body {
 .carousel-fade-right {
     background: linear-gradient(to left, 
         #ffffff 0%, 
+        rgba(255, 255, 255, 0.9) 20%, 
+        rgba(255, 255, 255, 0.6) 40%, 
+        rgba(255, 255, 255, 0.3) 60%, 
+        rgba(255, 255, 255, 0.1) 80%, 
         rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
     width: 120px;
@@ -149,6 +157,8 @@ body {
     display: flex;
     animation: scroll 30s linear infinite;
     max-width: 100%;
+    width: max-content;
+    will-change: transform;
 }
 
 @keyframes scroll {
@@ -156,7 +166,7 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-336px * 4)); /* Width of 4 cards (80px width + 4px margin on each side) */
+        transform: translateX(calc(-336px * 4)); /* Width of 4 cards, matching the number of original cards */
     }
 }
 
@@ -199,7 +209,7 @@ body {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-85vw * 4)); /* Adjust based on mobile card width */
+            transform: translateX(calc(-85vw * 4)); /* Mobile card width adjustment */
         }
     }
     
@@ -239,23 +249,23 @@ body {
 
 .carousel-fade-left {
     background: linear-gradient(to right, 
-        rgba(79, 70, 229, 1) 0%, 
-        rgba(79, 70, 229, 0.9) 20%, 
-        rgba(79, 70, 229, 0.6) 40%, 
-        rgba(79, 70, 229, 0.3) 60%, 
-        rgba(79, 70, 229, 0.1) 80%, 
-        rgba(79, 70, 229, 0) 100%);
+        #ffffff 0%, 
+        rgba(255, 255, 255, 0.9) 20%, 
+        rgba(255, 255, 255, 0.6) 40%, 
+        rgba(255, 255, 255, 0.3) 60%, 
+        rgba(255, 255, 255, 0.1) 80%, 
+        rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
 }
 
 .carousel-fade-right {
     background: linear-gradient(to left, 
-        rgba(79, 70, 229, 1) 0%, 
-        rgba(79, 70, 229, 0.9) 20%, 
-        rgba(79, 70, 229, 0.6) 40%, 
-        rgba(79, 70, 229, 0.3) 60%, 
-        rgba(79, 70, 229, 0.1) 80%, 
-        rgba(79, 70, 229, 0) 100%);
+        #ffffff 0%, 
+        rgba(255, 255, 255, 0.9) 20%, 
+        rgba(255, 255, 255, 0.6) 40%, 
+        rgba(255, 255, 255, 0.3) 60%, 
+        rgba(255, 255, 255, 0.1) 80%, 
+        rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
 }
 
@@ -263,22 +273,22 @@ body {
 .gradient-bg .carousel-fade-left,
 .gradient-bg .carousel-fade-right {
     background: linear-gradient(to right, 
-        rgba(67, 56, 202, 1) 0%, 
-        rgba(67, 56, 202, 0.9) 20%, 
-        rgba(67, 56, 202, 0.6) 40%, 
-        rgba(67, 56, 202, 0.3) 60%, 
-        rgba(67, 56, 202, 0.1) 80%, 
-        rgba(67, 56, 202, 0) 100%);
+        #ffffff 0%, 
+        rgba(255, 255, 255, 0.9) 20%, 
+        rgba(255, 255, 255, 0.6) 40%, 
+        rgba(255, 255, 255, 0.3) 60%, 
+        rgba(255, 255, 255, 0.1) 80%, 
+        rgba(255, 255, 255, 0) 100%);
 }
 
 .gradient-bg .carousel-fade-right {
     background: linear-gradient(to left, 
-        rgba(67, 56, 202, 1) 0%, 
-        rgba(67, 56, 202, 0.9) 20%, 
-        rgba(67, 56, 202, 0.6) 40%, 
-        rgba(67, 56, 202, 0.3) 60%, 
-        rgba(67, 56, 202, 0.1) 80%, 
-        rgba(67, 56, 202, 0) 100%);
+        #ffffff 0%, 
+        rgba(255, 255, 255, 0.9) 20%, 
+        rgba(255, 255, 255, 0.6) 40%, 
+        rgba(255, 255, 255, 0.3) 60%, 
+        rgba(255, 255, 255, 0.1) 80%, 
+        rgba(255, 255, 255, 0) 100%);
 }
 
 /* Adjust for mobile */
